@@ -61,12 +61,8 @@ type Algorithm string
 // [digests]: https://github.com/opencontainers/image-spec/blob/v1.0.2/descriptor.md#digests
 // [OCI image specification]: https://github.com/opencontainers/image-spec/blob/v1.0.2/descriptor.md#registered-algorithms
 const (
-	// Canonical is an alias for [SHA256] and the primary digest algorithm used.
-	// Other digests may be used but this one is the primary storage digest, and
-	// recommended in the [OCI image specification].
-	//
-	// [OCI image specification]: https://github.com/opencontainers/image-spec/blob/v1.0.2/descriptor.md#registered-algorithms
-	Canonical = SHA256
+	// Canonical is an alias for [BLAKE3].
+	Canonical = BLAKE3
 
 	// SHA256 is SHA-256 ([RFC 6234]) with hex encoding (lower case only). It is
 	// the [Canonical] algorithm, and enabled by default.
